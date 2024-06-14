@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './pages/homePage';
 import CustomersPage from './pages/customersPage';
 import NotFoundPage from './pages/notFoundPage';
@@ -10,11 +10,9 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/customers" component={CustomersPage} />
           <Route component={NotFoundPage} />
-        </Switch>
       </div>
     </Router>
   );
